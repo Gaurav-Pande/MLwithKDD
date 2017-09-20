@@ -1,0 +1,56 @@
+---------------1. Various Layers Types---------------------------
+AutoEncoder :Add Gaussian noise to input and learn a reconstruction function.
+
+RecursiveAutoEncoder :Uses back propagation through structure.
+
+SubsamplingLayer :Subsampling layer also referred to as pooling in convolution neural nets
+  Supports the following pooling types:
+     MAX
+     AVG
+     NON
+
+
+ImageLSTM  : mage LSTM recurrent net.Based on karpathy et. al's work on generation of image descriptions.
+
+GravesLSTM : LSTM recurrent net, based on Graves: Supervised Sequence Labelling with Recurrent Neural Networks
+  http://www.cs.toronto.edu/~graves/phd.pdf
+
+GRU :Gated Recurrent Unit RNN Layer.
+  The GRU was recently proposed by Cho et al. 2014 - http://arxiv.org/abs/1406.1078
+  It is similar to the LSTM architecture in that both use a gating structure within each unit
+  to attempt to capture long-term dependencies and deal with the vanishing gradient problem.
+  A GRU layer contains fewer parameters than an equivalent size LSTM layer, and some research
+  (such as http://arxiv.org/abs/1412.3555) suggests it may outperform LSTM layers (given an
+  equal number of parameters) in some cases.
+
+OutputLayer :Output layer with different objective co-occurrences for different objectives.
+  This includes classification as well as prediction.
+
+DenseLayer : fully connected feed forward layer trainable by backprop.
+------------------------------------------------------------------------------------
+
+-------------------2. Various WeightInit--------------------------------------------
+Weight initialization scheme
+ 
+  Distribution: Sample weights from a distribution based on shape of input
+  Normalized: Normalize sample weights
+  Size: Sample weights from bound uniform distribution using shape for min and max
+  Uniform: Sample weights from bound uniform distribution (specify min and max)
+  VI: Sample weights from variance normalized initialization (Glorot)
+  Zeros: Generate weights as zeros
+  Xavier:
+  RELU: N(0,2/nIn): He et al. (2015), Delving Deep into Rectifiers
+-------------------------------------------------------------------------------------
+
+-------------------3. Various Layers Activations functions--------------------------------------------
+ Layer activation function.
+ Typical values include:
+    "relu" (rectified linear), "tanh", "sigmoid", "softmax",
+    "hardtanh", "leakyrelu", "maxout", "softsign", "softplus"
+         
+-------------------------------------------------------------------------------------
+
+-------------------4. Various Layers Activations--------------------------------------------
+
+
+

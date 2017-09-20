@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>tsdr</artifactId>
+        <groupId>org.opendaylight.tsdr</groupId>
+        <version>1.2.0-SNAPSHOT</version>
+    </parent>
+	<groupId>com.tcs.kdd.read.demo</groupId>
+	<artifactId>DL4JwithKDDProject</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<nd4j.version>0.4-rc3.8</nd4j.version>
+		<dl4j.version>0.4-rc3.8</dl4j.version>
+		<canova.version>0.0.0.14</canova.version>
+		<java.version>1.7</java.version>
+		<jfreechart.version>1.0.13</jfreechart.version>
+		<guava.version>19.0</guava.version>
+		<maven.compile.plugin.version>2.5.1</maven.compile.plugin.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- dl4j dependencies -->
+
+		<dependency>
+			<groupId>org.deeplearning4j</groupId>
+			<artifactId>deeplearning4j-core</artifactId>
+			<version>${dl4j.version}</version>
+		</dependency>
+               <dependency>
+                       <groupId>org.deeplearning4j</groupId>
+                       <artifactId>deeplearning4j-ui</artifactId>
+                       <version>${dl4j.version}</version>
+                </dependency>
+
+		<dependency>
+			<groupId>org.nd4j</groupId>
+			<artifactId>nd4j-x86</artifactId>
+			<version>${nd4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<artifactId>canova-api</artifactId>
+			<groupId>org.nd4j</groupId>
+			<version>${canova.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+			<version>${jfreechart.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compile.plugin.version}</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
